@@ -10,7 +10,7 @@ import {
   Platform,
 } from "react-native";
 import { Feather as Icon } from "@expo/vector-icons";
-import { RectButton } from "react-native-gesture-handler";
+import { RectButton, ScrollView } from "react-native-gesture-handler";
 
 import { useNavigation } from "@react-navigation/native";
 
@@ -25,7 +25,7 @@ const NewAccont = () => {
         <ImageBackground
             style={styles.container}
         >
-        <View style={styles.form}>
+        <ScrollView style={styles.form}>
             <View style={styles.logo}>
                 <Image source={require("../../assets/logo-login.png")} />
             </View>
@@ -55,13 +55,28 @@ const NewAccont = () => {
             value={null}
             autoCorrect={false}
           />
-        
-        </View>
 
-        <RectButton style={styles.buttonAccount}>
-          <Text style={styles.buttonText}>Próximo</Text>
-        </RectButton>
+          <Text style={styles.formTitle}>Histórico de Saúde</Text>
 
+          <Text style={styles.subtitlesForm}>Você possui algum tipo de doença crônica?</Text>
+
+          <Text style={styles.formTitle}>Medicamentos</Text>
+
+          <Text style={styles.subtitlesForm}>Quais medicamentos você faz uso?</Text>
+
+          <TextInput
+            style={styles.input}
+            placeholder="Medicamento"
+            placeholderTextColor="#CF9387"
+            value={null}
+            autoCorrect={false}
+          />
+
+          <RectButton style={styles.buttonAccount}>
+            <Text style={styles.buttonText}>Cadastrar</Text>
+          </RectButton>
+
+        </ScrollView>
         </ImageBackground>
         </KeyboardAvoidingView>
     );
@@ -93,14 +108,14 @@ const styles = StyleSheet.create({
     subtitlesForm: {
         fontSize: 12,
         fontWeight: "bold",
-        marginBottom: 30,
+        marginBottom: 20,
     },
 
     input: {
         height: 50,
         backgroundColor: "#FFFFFF",
         borderRadius: 10,
-        marginBottom: 20,
+        marginBottom: 14,
         paddingHorizontal: 24,
         fontSize: 16,
     },
