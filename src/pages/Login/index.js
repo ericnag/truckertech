@@ -14,6 +14,11 @@ import { RectButton } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
 
 const Login = () => {
+  const navigation = useNavigation();
+  function handleNavigateToHome() {
+    navigation.navigate("Home");
+  }
+
   return (
     <KeyboardAvoidingView
       style={{ flex: 1 }}
@@ -46,7 +51,7 @@ const Login = () => {
             autoCorrect={false}
           />
         </View>
-        <RectButton style={styles.button} onPress={() => null}>
+        <RectButton style={styles.button} onPress={handleNavigateToHome}>
           <Text style={styles.buttonText}>Entrar</Text>
         </RectButton>
       </ImageBackground>
