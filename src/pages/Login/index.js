@@ -51,9 +51,13 @@ const Login = () => {
             autoCorrect={false}
           />
         </View>
+        <Text style={styles.IForgotMyPassword}>Esqueci minha senha</Text>
         <RectButton style={styles.button} onPress={handleNavigateToHome}>
           <Text style={styles.buttonText}>Entrar</Text>
         </RectButton>
+
+        <Text style={styles.CreateANewAccount}>Criar uma nova conta</Text>
+        <Text style={styles.SignInWithoutAccount}>Entrar sem conta</Text>
       </ImageBackground>
     </KeyboardAvoidingView>
   );
@@ -120,6 +124,14 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
 
+  IForgotMyPassword: {
+    color: "#FFFFFF",
+    fontWeight: "bold",
+    height: 20,
+    marginLeft: 209,
+    textDecorationLine: "underline",
+  },
+
   buttonIcon: {
     height: 60,
     width: 60,
@@ -135,6 +147,22 @@ const styles = StyleSheet.create({
     color: "#FFF",
     fontFamily: "Roboto_500Medium",
     fontSize: 25,
+  },
+
+  CreateANewAccount: {
+    color: "#FFFFFF",
+    fontWeight: "bold",
+    marginTop: 180,
+    marginLeft: 110,
+    textDecorationLine: "underline",
+  },
+
+  SignInWithoutAccount: {
+    color: "#FFFFFF",
+    fontWeight: "bold",
+    marginTop: 1,
+    marginLeft: 125,
+    textDecorationLine: "underline",
   },
 });
 
