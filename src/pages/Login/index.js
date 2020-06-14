@@ -65,8 +65,7 @@ const Login = () => {
         <RectButton style={styles.buttonNewAccount} onPress={handleNavigateToCreatAccont}>
           <Text style={styles.CreateANewAccount}>Criar uma nova conta</Text>
         </RectButton>
-        
-        <Text style={styles.SignInWithoutAccount}>Entrar sem conta</Text>
+      
       </ImageBackground>
     </KeyboardAvoidingView>
   );
@@ -167,14 +166,6 @@ const styles = StyleSheet.create({
   CreateANewAccount: {
     color: "#FFFFFF",
     fontWeight: "bold",
-    textDecorationLine: "underline",
-  },
-
-  SignInWithoutAccount: {
-    color: "#FFFFFF",
-    fontWeight: "bold",
-    marginTop: 2,
-    marginLeft: 125,
     textDecorationLine: "underline",
   },
 });
