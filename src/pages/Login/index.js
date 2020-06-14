@@ -13,11 +13,17 @@ import { Feather as Icon } from "@expo/vector-icons";
 import { RectButton } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
 
+
 const Login = () => {
   const navigation = useNavigation();
   function handleNavigateToHome() {
     navigation.navigate("Home");
   }
+
+  function handleNavigateToCreatAccont() {
+    navigation.navigate("NewAccont")
+  }
+  
 
   return (
     <KeyboardAvoidingView
@@ -56,7 +62,10 @@ const Login = () => {
           <Text style={styles.buttonText}>Entrar</Text>
         </RectButton>
 
-        <Text style={styles.CreateANewAccount}>Criar uma nova conta</Text>
+        <RectButton style={styles.buttonNewAccount} onPress={handleNavigateToCreatAccont}>
+          <Text style={styles.CreateANewAccount}>Criar uma nova conta</Text>
+        </RectButton>
+        
         <Text style={styles.SignInWithoutAccount}>Entrar sem conta</Text>
       </ImageBackground>
     </KeyboardAvoidingView>
@@ -149,21 +158,26 @@ const styles = StyleSheet.create({
     fontSize: 25,
   },
 
+  buttonNewAccount: {
+    marginHorizontal: 100,
+    marginTop: 180,
+    marginLeft: 110,
+  },
+
   CreateANewAccount: {
     color: "#FFFFFF",
     fontWeight: "bold",
-    marginTop: 180,
-    marginLeft: 110,
     textDecorationLine: "underline",
   },
 
   SignInWithoutAccount: {
     color: "#FFFFFF",
     fontWeight: "bold",
-    marginTop: 1,
+    marginTop: 2,
     marginLeft: 125,
     textDecorationLine: "underline",
   },
 });
 
 export default Login;
+
