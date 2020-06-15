@@ -7,7 +7,7 @@ Feito com React Native e Expo
 ## Execute o app:
 
 ```sh
-## Caso não possua o app em sua máquina
+## Caso não possua o Expo em sua máquina
 $ npm install -g expo-cli
 
 ## Na pasta do projeto execute:
